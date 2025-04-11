@@ -26,6 +26,30 @@ const productos = [
   const nombresProductos = productos.map(producto => producto.nombre);
     console.log(nombresProductos);
 
- //Filtrar productos de categoría 'Ropa'"
+ //Filtrar productos de categoría 'Ropa'
  const productosRopa = productos.filter(producto => producto.categoria === "Ropa");
-    console.log(productosRopa);   
+    console.log(productosRopa);
+    
+//Filtrar productos con precio mayor a $3000
+const productosMayoresA3000 = productos.filter(producto => producto.precio > 3000);
+    console.log(productosMayoresA3000); 
+    
+//Buscar el producto con nombre 'Gorra'
+const productoGorra = productos.find(producto => producto.nombre === "Gorra");
+    console.log(productoGorra);
+    
+//Parte 3
+console.log("Parte 3");
+//Usá .some() para comprobar si existe algún producto con un precio mayor a $10.000
+const existeProductoCaro = productos.some(producto => producto.precio > 10000);
+    console.log(existeProductoCaro);
+
+//Verificar con .every()
+const todosMayoresA1000 = productos.every(producto => producto.precio > 1000);
+    console.log(todosMayoresA1000);
+
+//Verificar existencia con .includes()
+const incluyeCampera = nombresProductos.includes("Campera");
+    console.log(incluyeCampera);
+    
+
