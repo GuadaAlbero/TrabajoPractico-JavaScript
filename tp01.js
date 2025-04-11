@@ -51,5 +51,23 @@ const todosMayoresA1000 = productos.every(producto => producto.precio > 1000);
 //Verificar existencia con .includes()
 const incluyeCampera = nombresProductos.includes("Campera");
     console.log(incluyeCampera);
-    
 
+//Parte 4
+console.log("Parte 4");
+//Ordenar con .sort()
+//operador spread ([...productos]) para clonar el array original
+const productosOrdenados = [...productos].sort((a, b) => a.precio - b.precio);
+    console.log(productosOrdenados);
+
+ //Generar mensajes personalizados con .map()
+ const mensajesProductos = productos.map(producto =>
+    `El producto ${producto.nombre} cuesta $${producto.precio} y pertenece a la categoría ${producto.categoria}.`
+  );
+    console.log(mensajesProductos);   
+
+//Agregar productos con spread
+const nuevosProductos = [
+    { id: 6, nombre: "Ojotas", precio: 1900, categoria: "Calzado" }
+  ];
+  const productosCombinados = [...productos, ...nuevosProductos];
+    console.log(productosCombinados);    
